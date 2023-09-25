@@ -1,7 +1,12 @@
-#include <stdio.h>
 #include "sort.h"
-#include <stdbool.h>
 
+/**
+ * bubble_sort- sorts arrar using bubble sort implementation
+ * @array: array to sort
+ * @size: size of the array
+ *
+ * Return: void
+ */
 void bubble_sort(int *array, size_t size)
 {
     size_t a, b, temp;
