@@ -1,5 +1,12 @@
 #include "sort.h"
 
+/**
+ * shell_sort - sorts an array of integers in ascending order
+ * using the shell sort algorithm
+ * @array: pointer to the array
+ * @size: size of the array
+ * Return: nothing
+ */
 void shell_sort(int *array, size_t size)
 {
 	int i, j, gap = 1;
