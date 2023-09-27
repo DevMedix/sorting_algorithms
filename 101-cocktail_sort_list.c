@@ -1,5 +1,12 @@
 #include "sort.h"
 
+/**
+ * swap - swaps two adjecent nodes in a doubly linked list
+ * @list: pointer to pointer to the DDL
+ * @a: pointer to first node
+ * @b: pointer to second node
+ * Return: nothing
+ */
 void swap(listint_t **list, listint_t *a, listint_t *b)
 {
 	listint_t *temp;
@@ -19,6 +26,13 @@ void swap(listint_t **list, listint_t *a, listint_t *b)
 	temp->next = a;
 }
 
+/**
+ * cocktail_sort_list - sorts a doubly liked list of integers
+ * using the cocktail shaker sort algorithm
+ * @list: pointer to pointer of the DDL
+ *
+ * Return: nothing
+ */
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *temp;
