@@ -24,6 +24,7 @@ void swap(listint_t **list, listint_t *a, listint_t *b)
 	temp = b;
 	a->next = b->next;
 	temp->next = a;
+	print_list(*list);
 }
 
 /**
@@ -43,15 +44,13 @@ void cocktail_sort_list(listint_t **list)
 		return;
 
 	temp = *list;
-	do
-	{
+	do {
 		swapped = false;
 		for (i = 0; temp->next && i < range; i++)
 		{
 			if (temp->n > temp->next->n)
 			{
 				swap(list, temp, temp->next);
-				print_list(*list);
 				swapped = true;
 			}
 			else
@@ -64,13 +63,11 @@ void cocktail_sort_list(listint_t **list)
 			swapped = false;
 			temp = temp->prev;
 		}
-
 		for (i = 0; temp->prev && i < range; i++)
 		{
 			if (temp->n < temp->prev->n)
 			{
 				swap(list, temp->prev, temp);
-				print_list(*list);
 				swapped = true;
 			}
 			else
